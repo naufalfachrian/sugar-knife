@@ -36,4 +36,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Release', 'created_by');
     }
+
+    public function images()
+    {
+        return $this->belongsToMany('App\Image');
+    }
 }
