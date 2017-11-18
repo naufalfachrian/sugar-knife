@@ -12,7 +12,7 @@ class Project extends Model
      * @var array
      */
     protected $fillable = [
-        'slug', 'title', 'status', 'description', 'type', 'note', 'created_by', 'join_with',
+        'slug', 'title', 'status', 'description', 'type', 'note', 'created_by',
     ];
 
     public function createdBy()
