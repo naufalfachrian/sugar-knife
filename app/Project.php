@@ -34,4 +34,9 @@ class Project extends Model
     {
         return $this->hasMany('App\Release', 'project');
     }
+
+    public function images()
+    {
+        return $this->belongsToMany('App\Image');
+    }
 }
