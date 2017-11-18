@@ -23,10 +23,8 @@ class CreateProjectsTable extends Migration
             $table->text('note')->nullable();
 
             $table->unsignedInteger('created_by');
-            $table->unsignedInteger('join_with');
 
             $table->foreign('created_by')->references('id')->on('users');
-            $table->foreign('join_with')->references('id')->on('partners');
 
             $table->timestamps();
         });
