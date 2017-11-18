@@ -14,4 +14,14 @@ class Project extends Model
     protected $fillable = [
         'slug', 'title', 'status', 'description', 'type', 'note', 'created_by', 'join_with',
     ];
+
+    public function createdBy()
+    {
+        return $this->belongsTo('App\User', 'created_by');
+    }
+
+    public function joinWith()
+    {
+        return $this->belongsTo('App\Partner', 'join_with');
+    }
 }
