@@ -19,9 +19,4 @@ class Project extends Model
     {
         return $this->belongsTo('App\User', 'created_by');
     }
-
-    public function joinWith()
-    {
-        return $this->belongsTo('App\Partner', 'join_with');
-    }
 }
