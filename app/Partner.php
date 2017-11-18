@@ -14,4 +14,9 @@ class Partner extends Model
     protected $fillable = [
         'slug', 'name', 'homepage', 'note',
     ];
+
+    public function projects()
+    {
+        return $this->belongsToMany('App\Project');
+    }
 }

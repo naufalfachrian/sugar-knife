@@ -14,4 +14,9 @@ class Genre extends Model
     protected $fillable = [
         'slug', 'name', 'note',
     ];
+
+    public function projects()
+    {
+        return $this->belongsToMany('App\Project');
+    }
 }

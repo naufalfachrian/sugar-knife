@@ -24,4 +24,9 @@ class Release extends Model
     {
         return $this->belongsTo('App\Project', 'project');
     }
+
+    public function links()
+    {
+        return $this->belongsToMany('App\Link');
+    }
 }

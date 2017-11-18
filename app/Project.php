@@ -19,4 +19,24 @@ class Project extends Model
     {
         return $this->belongsTo('App\User', 'created_by');
     }
+
+    public function links()
+    {
+        return $this->belongsToMany('App\Link');
+    }
+
+    public function genres()
+    {
+        return $this->belongsToMany('App\Genre');
+    }
+
+    public function partners()
+    {
+        return $this->belongsToMany('App\Partner');
+    }
+
+    public function releases()
+    {
+        return $this->hasMany('App\Release', 'project');
+    }
 }
